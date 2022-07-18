@@ -78,7 +78,9 @@ variable "subnetTuple" {
 
 variable "mapvar" {
     default =               {
-    	disc_info = "first disc"
+    	disc_info = {	
+		size 	: 50 
+	}
 	tag_info : 	{
 	  "name" : "cpgnic"
 	  duration = 958,
