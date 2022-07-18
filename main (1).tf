@@ -17,7 +17,7 @@ resource "aws_network_interface" "nicByTFO" {
   subnet_id = "${aws_subnet.subnetByTFE.id}"
   description = "My NIC"
   tags = {
-    Name = var.mapvar["name"]
+    Name = var.mapvar["tag_info"]["name"]
   }
 }
 
