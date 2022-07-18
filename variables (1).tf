@@ -68,7 +68,7 @@ variable "subnetTuple" {
  commment
  */
  default = [false, true,{
-   name : "vpc-0163eb001426736ac"
+   name : "vpc-0ee8ceb17cfd9e53b"
    //commment .......,
    env  : "Dev",
    isAvailable : true
@@ -77,12 +77,15 @@ variable "subnetTuple" {
 }
 
 variable "mapvar" {
-    default =                         {
+    default =               {
+    	disc_info = "first disc"
+	tag_info : 	{
 	  "name" : "cpgnic"
 	  duration = 958,
 	  count = 45
   }
-  type = map  (string)
+    }
+  type = map  (map(string))
   description = "mapppp type"
 }
 
