@@ -33,27 +33,28 @@ variable "numberType" {
 variable "anyvar" {
 	type = any
 	default = [
-	"a",
-	"b", "a"]
+		"volume1",
+		"volume3", 
+		"volume2"
+	]
 }
 
 variable "imageset" {
 	type = set(string)
 	default = [
-	"image 1",
-	"image 2", "image 3"]
+		"image 1",
+		"image 2", 
+		"image 3"
+	]
 }
 
 variable "listType" {
  type        = list
-  default     = ["t2.micro", #comment
- 					"m1.small" // comment ..,
+  default     = [
+	  	"t2.micro",
+ 		"m1.small"
            ]
  description = "Instance types for the EC2 instance"
- /*
-	multiline 
-	* comment
- */
 }
 
 variable "subnetTuple" {
@@ -63,13 +64,8 @@ variable "subnetTuple" {
    isAvailable = bool
  })
  ])
- /***
- comment
- commment
- */
  default = [false, true,{
    name : "vpc-0ee8ceb17cfd9e53b"
-   //commment .......,
    env  : "Dev",
    isAvailable : true
  }]
@@ -95,8 +91,7 @@ variable "mapvar" {
  
 variable "objectVar" {
  default = {
-   name = "My Vm Instance"
-   //commment .......,
+   name = "Ec2 dev instance"
    env  = "Dev",
    isAvailable = true
  }
